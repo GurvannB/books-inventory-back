@@ -1,0 +1,11 @@
+spring:
+  security:
+    user:
+      name: user
+      password: $2a$12$tHPJUAUq48pVQJi1VFOKvu7EfJUOB8n/wYOBGM64Kehh/V3XsmyYW
+  application:
+    name: inventory
+
+server:
+  servlet:
+    context-path: /api
