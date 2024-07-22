@@ -11,9 +11,9 @@ import java.util.List;
 public class BookTypeDto {
     private Long id;
     private Long isbn;
-    private String publisher;
+    private String editor;
     private String grade;
-    private String level;
+    private String subject;
     private String coverUrl;
     private List<BookDto> books;
 
@@ -21,9 +21,9 @@ public class BookTypeDto {
         return BookTypeDto.builder()
                 .id(bookType.getBookTypeId())
                 .isbn(bookType.getIsbn())
-                .publisher(bookType.getEditor())
+                .editor(bookType.getEditor())
                 .grade(bookType.getGrade())
-                .level(bookType.getSubject())
+                .subject(bookType.getSubject())
                 .coverUrl(bookType.getCoverUrl());
     }
 

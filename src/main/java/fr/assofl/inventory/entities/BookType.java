@@ -1,5 +1,6 @@
 package fr.assofl.inventory.entities;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -38,6 +39,6 @@ public class BookType {
     @Column(nullable = false)
     private String coverUrl;
 
-    @OneToMany(mappedBy = "bookType")
+    @OneToMany(mappedBy = "bookType", cascade = CascadeType.ALL)
     private List<Book> books;
 }

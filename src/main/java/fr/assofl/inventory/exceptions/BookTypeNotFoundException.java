@@ -3,7 +3,7 @@ package fr.assofl.inventory.exceptions;
 import org.springframework.http.HttpStatus;
 
 public class BookTypeNotFoundException extends BusinessException {
-    private static final String DEFAULT_MESSAGE = "error.bookType.notFound";
+    private static final String DEFAULT_MESSAGE = "Le type de manuel n'a pas été trouvé";
     private static final HttpStatus HTTP_STATUS = HttpStatus.NOT_FOUND;
 
 

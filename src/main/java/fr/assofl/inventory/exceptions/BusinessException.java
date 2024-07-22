@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus;
 
 public class BusinessException extends RuntimeException {
 
-    private static final String DEFAULT_MESSAGE = "error.default";
+    private static final String DEFAULT_MESSAGE = "Une erreur est survenue";
     public static final HttpStatus DEFAULT_STATUS = HttpStatus.INTERNAL_SERVER_ERROR;
     private HttpStatus status;
 

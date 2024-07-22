@@ -3,7 +3,7 @@ package fr.assofl.inventory.exceptions;
 import org.springframework.http.HttpStatus;
 
 public class BookTypeIsbnAlreadyExistsException extends BusinessException {
-    private static final String DEFAULT_MESSAGE = "error.bookType.alreadyExists";
+    private static final String DEFAULT_MESSAGE = "Cet ISBN est déjà utilisé";
     private static final HttpStatus HTTP_STATUS = HttpStatus.CONFLICT;
 
 
