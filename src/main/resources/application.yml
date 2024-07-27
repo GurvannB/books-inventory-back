@@ -8,14 +8,20 @@ spring:
   datasource:
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
-    url: ${DB_JDBC_URL}
-    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mysql://${DB_HOST}${DB_PORT}/${DB_NAME}
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: ${DB_DIALECT}
+        boot:
+          allow_jdbc_metadata_access: false
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  sql:
+    init:
+      mode: never
 
 server:
   servlet:
